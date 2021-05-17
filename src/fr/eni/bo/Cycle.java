@@ -49,7 +49,7 @@ public abstract class Cycle {
         return  this.modele +
                 " " + this.marque  +
                 " (" + ChronoUnit.YEARS.between(this.dateAchat, LocalDate.now()) +
-                "an(s)) "
+                "an" + ((ChronoUnit.YEARS.between(this.dateAchat, LocalDate.now()) > 1 ? "s) " : ") "))
                 ;
     }
 
